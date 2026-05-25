@@ -1,5 +1,5 @@
 {
-  "sessionId": "sess_5fkei900",
+  "sessionId": "sess_25u8lwju",
   "fullHistory": [
     {
       "role": "user",
@@ -7,11 +7,7 @@
     },
     {
       "role": "assistant",
-      "content": "Hey! I'm Roba Copilot — your co-pilot for the PIB robot. Here's what we can do together:\n\n🤖 Poses\n\"Raise the left arm forward\"\n\"Turn the head to look right\"\n\"Sit the robot in a relaxed stance\"\n\n✋ Hands\n\"Close the left fist\"\n\"Open the right hand\"\n\"Pinch with the left thumb and index finger\"\n\n🎬 Animations\n\"Wave the right arm\"\n\"Nod the head repeatedly\"\n\"Do a quick salute\"\n\n⌨️ Code & Controls\n\"Map keyboard arrows to head movements\"\n\"Add a button to toggle arm raising\"\n\"Set up a joystick to control both hands\""
-    },
-    {
-      "role": "assistant",
-      "content": "Hey there! Welcome to **Roba Studio** 👋 I'm excited to be your co-pilot for the PIB robot! What would you like to build today?"
+      "content": "Hey! I'm Roba Copilot — your co-pilot for the PIB robot. Here's what we can do together:\n\n🤖 Poses\n\"Raise the left arm forward\"\n\"Turn the head left and look up\"\n\"Make the robot stand in a T-pose\"\n\n✋ Hands\n\"Close the left fist\"\n\"Open the right hand\"\n\"Point with the index finger of the right hand\"\n\n🎬 Animations\n\"Wave the left arm\"\n\"Nod the head\"\n\"Shake the head side to side\"\n\n⌨️ Code & Controls\n\"Set the left elbow to bend\"\n\"Adjust the shoulder horizontal joint\"\n\"Change the wrist rotation speed\""
     }
   ],
   "agentHistory": [
@@ -21,14 +17,10 @@
     },
     {
       "role": "assistant",
-      "content": "Hey! I'm Roba Copilot — your co-pilot for the PIB robot. Here's what we can do together:\n\n🤖 Poses\n\"Raise the left arm forward\"\n\"Turn the head to look right\"\n\"Sit the robot in a relaxed stance\"\n\n✋ Hands\n\"Close the left fist\"\n\"Open the right hand\"\n\"Pinch with the left thumb and index finger\"\n\n🎬 Animations\n\"Wave the right arm\"\n\"Nod the head repeatedly\"\n\"Do a quick salute\"\n\n⌨️ Code & Controls\n\"Map keyboard arrows to head movements\"\n\"Add a button to toggle arm raising\"\n\"Set up a joystick to control both hands\""
-    },
-    {
-      "role": "assistant",
-      "content": "Hey there! Welcome to **Roba Studio** 👋 I'm excited to be your co-pilot for the PIB robot! What would you like to build today?"
+      "content": "Hey! I'm Roba Copilot — your co-pilot for the PIB robot. Here's what we can do together:\n\n🤖 Poses\n\"Raise the left arm forward\"\n\"Turn the head left and look up\"\n\"Make the robot stand in a T-pose\"\n\n✋ Hands\n\"Close the left fist\"\n\"Open the right hand\"\n\"Point with the index finger of the right hand\"\n\n🎬 Animations\n\"Wave the left arm\"\n\"Nod the head\"\n\"Shake the head side to side\"\n\n⌨️ Code & Controls\n\"Set the left elbow to bend\"\n\"Adjust the shoulder horizontal joint\"\n\"Change the wrist rotation speed\""
     }
   ],
   "compressionCount": 0,
   "workspaceRoot": "/home/robacrh/roba/roba-laravel/repos/faridhossainrd/my-mujoco-sim-1779731893",
-  "savedAt": 1779733647787
+  "savedAt": 1779733586567
 }
