@@ -1,0 +1,26 @@
+{
+  "sessionId": "sess_q2iu04er",
+  "fullHistory": [
+    {
+      "role": "user",
+      "content": "Generate a welcome quick-reference card for this Roba Studio project. Use exactly 4 markdown sections with these emoji headers: 🤖 Poses, ✋ Hands, 🎬 Animations, ⌨️ Code & Controls. Under each section list 4–5 example prompts in double quotes — no prose, no descriptions, just the quoted commands. Make every example specific to this project's robot (use real pose names, actual joint directions, real capabilities you know about). No intro sentence, no closing sentence. Just the 4 sections."
+    },
+    {
+      "role": "assistant",
+      "content": "### 🤖 Poses\n- \"Set head_horizontal to 0.5 to turn left\"\n- \"Raise left arm forward with shoulder_vertical -1.0, upper_arm -0.8, shoulder_horizontal -0.3\"\n- \"Raise right arm forward with shoulder_vertical 1.0, upper_arm -0.8, shoulder_horizontal 0.3\"\n- \"T-pose both arms: left shoulder_horizontal -1.0, left shoulder_vertical -0.5, left upper_arm -0.5; right shoulder_horizontal 1.0, right shoulder_vertical 0.5, right upper_arm -0.5\"\n\n### ✋ Hands\n- \"Close left hand thumb with actuator 8 set to -1\"\n- \"Open left index finger with actuator 9 set to 1\"\n- \"Curl right hand middle finger with actuator 27 set to -0.8\"\n- \"Spread right hand fingers with actuators 30‑34 set to 0.5\"\n\n### 🎬 Animations\n- \"Wave left arm: sinusoidal shoulder_vertical [-0.8+0.3*sin(t*3)], elbow 0.6, upper_arm -0.5\"\n- \"Nod head: head_vertical 0.5*sin(t*2)\"\n- \"Shake head: head_horizontal 0.5*sin(t*3)\"\n- \"Blink both eyes (if eye actuators exist) with actuator 36 toggling between 0 and 1\"\n\n### ⌨️ Code & Controls\n- \"In main.js set data.ctrl[2] = -1.0; data.ctrl[4] = -0.8; data.ctrl[3] = -0.3 to raise left arm\"\n- \"Adjust right arm: data.ctrl[19] = 1.0; data.ctrl[21] = -0.8; data.ctrl[20] = 0.3\"\n- \"Toggle pause with this.params['paused'] = !this.params['paused']\"\n- \"Change simulation timestep to 0.001 in options XML\""
+    }
+  ],
+  "agentHistory": [
+    {
+      "role": "user",
+      "content": "Generate a welcome quick-reference card for this Roba Studio project. Use exactly 4 markdown sections with these emoji headers: 🤖 Poses, ✋ Hands, 🎬 Animations, ⌨️ Code & Controls. Under each section list 4–5 example prompts in double quotes — no prose, no descriptions, just the quoted commands. Make every example specific to this project's robot (use real pose names, actual joint directions, real capabilities you know about). No intro sentence, no closing sentence. Just the 4 sections."
+    },
+    {
+      "role": "assistant",
+      "content": "### 🤖 Poses\n- \"Set head_horizontal to 0.5 to turn left\"\n- \"Raise left arm forward with shoulder_vertical -1.0, upper_arm -0.8, shoulder_horizontal -0.3\"\n- \"Raise right arm forward with shoulder_vertical 1.0, upper_arm -0.8, shoulder_horizontal 0.3\"\n- \"T-pose both arms: left shoulder_horizontal -1.0, left shoulder_vertical -0.5, left upper_arm -0.5; right shoulder_horizontal 1.0, right shoulder_vertical 0.5, right upper_arm -0.5\"\n\n### ✋ Hands\n- \"Close left hand thumb with actuator 8 set to -1\"\n- \"Open left index finger with actuator 9 set to 1\"\n- \"Curl right hand middle finger with actuator 27 set to -0.8\"\n- \"Spread right hand fingers with actuators 30‑34 set to 0.5\"\n\n### 🎬 Animations\n- \"Wave left arm: sinusoidal shoulder_vertical [-0.8+0.3*sin(t*3)], elbow 0.6, upper_arm -0.5\"\n- \"Nod head: head_vertical 0.5*sin(t*2)\"\n- \"Shake head: head_horizontal 0.5*sin(t*3)\"\n- \"Blink both eyes (if eye actuators exist) with actuator 36 toggling between 0 and 1\"\n\n### ⌨️ Code & Controls\n- \"In main.js set data.ctrl[2] = -1.0; data.ctrl[4] = -0.8; data.ctrl[3] = -0.3 to raise left arm\"\n- \"Adjust right arm: data.ctrl[19] = 1.0; data.ctrl[21] = -0.8; data.ctrl[20] = 0.3\"\n- \"Toggle pause with this.params['paused'] = !this.params['paused']\"\n- \"Change simulation timestep to 0.001 in options XML\""
+    }
+  ],
+  "compressionCount": 0,
+  "workspaceRoot": "/home/robacrh/roba/roba-laravel/repos/faridhossainrd/my-mujoco-sim-1779731893",
+  "savedAt": 1779732325522
+}
