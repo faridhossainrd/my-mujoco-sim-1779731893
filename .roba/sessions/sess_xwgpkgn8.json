@@ -1,0 +1,26 @@
+{
+  "sessionId": "sess_xwgpkgn8",
+  "fullHistory": [
+    {
+      "role": "user",
+      "content": "Reply with EXACTLY this format, filling in the blanks — no extra text, no changes to the structure:\n\nHey! I'm Roba Copilot — your co-pilot for the [ROBOT NAME]. Here's what we can do together:\n\n🤖 Poses\n\"[short natural example]\"\n\"[short natural example]\"\n\"[short natural example]\"\n\n✋ Hands\n\"[short natural example]\"\n\"[short natural example]\"\n\"[short natural example]\"\n\n🎬 Animations\n\"[short natural example]\"\n\"[short natural example]\"\n\"[short natural example]\"\n\n⌨️ Code & Controls\n\"[short natural example]\"\n\"[short natural example]\"\n\"[short natural example]\"\n\nReplace [ROBOT NAME] with the actual robot name. Fill each example with a short, fun, natural human request (like \"Make it wave\" or \"Close the left fist\") — no code, no joint values."
+    },
+    {
+      "role": "assistant",
+      "content": "Hey! I'm Roba Copilot — your co-pilot for the PIB robot. Here's what we can do together:\n\n🤖 Poses\n\"Raise my left arm forward\"\n\"Tilt the head up slightly\"\n\"Turn the torso to face left\"\n\n✋ Hands\n\"Close the right hand into a fist\"\n\"Open the left hand fully\"\n\"Point the left index finger outward\"\n\n🎬 Animations\n\"Make the robot wave its right hand\"\n\"Play a nodding head animation\"\n\"Perform a slow T‑pose transition\"\n\n⌨️ Code & Controls\n\"Set the left elbow to bend halfway\"\n\"Increase the grip strength of both hands\"\n\"Reset all joints to the default neutral pose\""
+    }
+  ],
+  "agentHistory": [
+    {
+      "role": "user",
+      "content": "Reply with EXACTLY this format, filling in the blanks — no extra text, no changes to the structure:\n\nHey! I'm Roba Copilot — your co-pilot for the [ROBOT NAME]. Here's what we can do together:\n\n🤖 Poses\n\"[short natural example]\"\n\"[short natural example]\"\n\"[short natural example]\"\n\n✋ Hands\n\"[short natural example]\"\n\"[short natural example]\"\n\"[short natural example]\"\n\n🎬 Animations\n\"[short natural example]\"\n\"[short natural example]\"\n\"[short natural example]\"\n\n⌨️ Code & Controls\n\"[short natural example]\"\n\"[short natural example]\"\n\"[short natural example]\"\n\nReplace [ROBOT NAME] with the actual robot name. Fill each example with a short, fun, natural human request (like \"Make it wave\" or \"Close the left fist\") — no code, no joint values."
+    },
+    {
+      "role": "assistant",
+      "content": "Hey! I'm Roba Copilot — your co-pilot for the PIB robot. Here's what we can do together:\n\n🤖 Poses\n\"Raise my left arm forward\"\n\"Tilt the head up slightly\"\n\"Turn the torso to face left\"\n\n✋ Hands\n\"Close the right hand into a fist\"\n\"Open the left hand fully\"\n\"Point the left index finger outward\"\n\n🎬 Animations\n\"Make the robot wave its right hand\"\n\"Play a nodding head animation\"\n\"Perform a slow T‑pose transition\"\n\n⌨️ Code & Controls\n\"Set the left elbow to bend halfway\"\n\"Increase the grip strength of both hands\"\n\"Reset all joints to the default neutral pose\""
+    }
+  ],
+  "compressionCount": 0,
+  "workspaceRoot": "/home/robacrh/roba/roba-laravel/repos/faridhossainrd/my-mujoco-sim-1779731893",
+  "savedAt": 1779732991545
+}
