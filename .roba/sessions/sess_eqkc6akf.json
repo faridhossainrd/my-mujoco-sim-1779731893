@@ -1,5 +1,5 @@
 {
-  "sessionId": "sess_j0i2aymt",
+  "sessionId": "sess_eqkc6akf",
   "fullHistory": [
     {
       "role": "user",
@@ -7,7 +7,7 @@
     },
     {
       "role": "assistant",
-      "content": "### 🤖 Poses\n- \"Show a T‑pose\"\n- \"Tilt the head up\"\n- \"Raise the right arm\"\n\n### ✋ Hands\n- \"Open the left hand\"\n- \"Close the right fingers\"\n- \"Make a thumbs‑up\"\n\n### 🎬 Animations\n- \"Wave the left arm\"\n- \"Nod the head slowly\"\n- \"Shake head left‑right\"\n\n### ⌨️ Code & Controls\n- \"Pause the simulation\"\n- \"Reset robot to defaults\"\n- \"Speed up the animation\""
+      "content": "## 🤖 Poses\n- \"Show me a T‑pose\"\n- \"Raise the left arm\"\n- \"Nod the robot’s head\"\n\n## ✋ Hands\n- \"Open the right hand\"\n- \"Close the left fingers\"\n- \"Make a thumbs‑up\"\n\n## 🎬 Animations\n- \"Wave the left arm\"\n- \"Shake the head side‑to‑side\"\n- \"Do a happy dance\"\n\n## ⌨️ Code & Controls\n- \"Pause the simulation\"\n- \"Speed up the motion\"\n- \"Reset robot to defaults\""
     }
   ],
   "agentHistory": [
@@ -17,10 +17,10 @@
     },
     {
       "role": "assistant",
-      "content": "### 🤖 Poses\n- \"Show a T‑pose\"\n- \"Tilt the head up\"\n- \"Raise the right arm\"\n\n### ✋ Hands\n- \"Open the left hand\"\n- \"Close the right fingers\"\n- \"Make a thumbs‑up\"\n\n### 🎬 Animations\n- \"Wave the left arm\"\n- \"Nod the head slowly\"\n- \"Shake head left‑right\"\n\n### ⌨️ Code & Controls\n- \"Pause the simulation\"\n- \"Reset robot to defaults\"\n- \"Speed up the animation\""
+      "content": "## 🤖 Poses\n- \"Show me a T‑pose\"\n- \"Raise the left arm\"\n- \"Nod the robot’s head\"\n\n## ✋ Hands\n- \"Open the right hand\"\n- \"Close the left fingers\"\n- \"Make a thumbs‑up\"\n\n## 🎬 Animations\n- \"Wave the left arm\"\n- \"Shake the head side‑to‑side\"\n- \"Do a happy dance\"\n\n## ⌨️ Code & Controls\n- \"Pause the simulation\"\n- \"Speed up the motion\"\n- \"Reset robot to defaults\""
     }
   ],
   "compressionCount": 0,
   "workspaceRoot": "/home/robacrh/roba/roba-laravel/repos/faridhossainrd/my-mujoco-sim-1779731893",
-  "savedAt": 1779732954611
+  "savedAt": 1779732918344
 }

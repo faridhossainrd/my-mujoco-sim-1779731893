@@ -1,0 +1,26 @@
+{
+  "sessionId": "sess_smauytlp",
+  "fullHistory": [
+    {
+      "role": "user",
+      "content": "Write a welcome message for this Roba Studio project. Start with 1–2 short, engaging sentences introducing yourself as Roba Copilot and mentioning the specific robot by name (e.g. \"Hey! I'm Roba Copilot — your co-pilot for the Unitree G1. Here's what we can do together:\"). Then show exactly 4 markdown sections with emoji headers: 🤖 Poses, ✋ Hands, 🎬 Animations, ⌨️ Code & Controls. Under each section list exactly 3 example prompts in double quotes — short, natural human phrasing like \"Make it wave\" or \"Close the left fist\", not code. No closing sentence."
+    },
+    {
+      "role": "assistant",
+      "content": "Hey! I'm Roba Copilot — your co‑pilot for the PIB robot. Let’s explore what we can do together:\n\n## 🤖 Poses\n- \"Raise the right arm forward\"\n- \"Tilt the head left\"\n- \"Put the robot in a T‑pose\"\n\n## ✋ Hands\n- \"Close the left fist\"\n- \"Open the right hand\"\n- \"Spread all fingers\"\n\n## 🎬 Animations\n- \"Wave the left arm\"\n- \"Nod the head repeatedly\"\n- \"Perform a side‑to‑side shrug\"\n\n## ⌨️ Code & Controls\n- \"Increase the shoulder vertical power\"\n- \"Add a custom keyboard shortcut for raising the left arm\"\n- \"Show the current ctrl values in the console\""
+    }
+  ],
+  "agentHistory": [
+    {
+      "role": "user",
+      "content": "Write a welcome message for this Roba Studio project. Start with 1–2 short, engaging sentences introducing yourself as Roba Copilot and mentioning the specific robot by name (e.g. \"Hey! I'm Roba Copilot — your co-pilot for the Unitree G1. Here's what we can do together:\"). Then show exactly 4 markdown sections with emoji headers: 🤖 Poses, ✋ Hands, 🎬 Animations, ⌨️ Code & Controls. Under each section list exactly 3 example prompts in double quotes — short, natural human phrasing like \"Make it wave\" or \"Close the left fist\", not code. No closing sentence."
+    },
+    {
+      "role": "assistant",
+      "content": "Hey! I'm Roba Copilot — your co‑pilot for the PIB robot. Let’s explore what we can do together:\n\n## 🤖 Poses\n- \"Raise the right arm forward\"\n- \"Tilt the head left\"\n- \"Put the robot in a T‑pose\"\n\n## ✋ Hands\n- \"Close the left fist\"\n- \"Open the right hand\"\n- \"Spread all fingers\"\n\n## 🎬 Animations\n- \"Wave the left arm\"\n- \"Nod the head repeatedly\"\n- \"Perform a side‑to‑side shrug\"\n\n## ⌨️ Code & Controls\n- \"Increase the shoulder vertical power\"\n- \"Add a custom keyboard shortcut for raising the left arm\"\n- \"Show the current ctrl values in the console\""
+    }
+  ],
+  "compressionCount": 0,
+  "workspaceRoot": "/home/robacrh/roba/roba-laravel/repos/faridhossainrd/my-mujoco-sim-1779731893",
+  "savedAt": 1779732822433
+}
