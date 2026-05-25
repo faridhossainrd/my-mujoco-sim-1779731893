@@ -1,0 +1,26 @@
+{
+  "sessionId": "sess_5fkei900",
+  "fullHistory": [
+    {
+      "role": "user",
+      "content": "[ROBA_WELCOME_TRIGGER] Reply with EXACTLY this format, filling in the blanks — no extra text, no changes to the structure:\n\nHey! I'm Roba Copilot — your co-pilot for the [ROBOT NAME]. Here's what we can do together:\n\n🤖 Poses\n\"[short natural example]\"\n\"[short natural example]\"\n\"[short natural example]\"\n\n✋ Hands\n\"[short natural example]\"\n\"[short natural example]\"\n\"[short natural example]\"\n\n🎬 Animations\n\"[short natural example]\"\n\"[short natural example]\"\n\"[short natural example]\"\n\n⌨️ Code & Controls\n\"[short natural example]\"\n\"[short natural example]\"\n\"[short natural example]\"\n\nReplace [ROBOT NAME] with the actual robot name. Fill each example with a short, fun, natural human request (like \"Make it wave\" or \"Close the left fist\") — no code, no joint values."
+    },
+    {
+      "role": "assistant",
+      "content": "Hey! I'm Roba Copilot — your co-pilot for the PIB robot. Here's what we can do together:\n\n🤖 Poses\n\"Raise the left arm forward\"\n\"Turn the head to look right\"\n\"Sit the robot in a relaxed stance\"\n\n✋ Hands\n\"Close the left fist\"\n\"Open the right hand\"\n\"Pinch with the left thumb and index finger\"\n\n🎬 Animations\n\"Wave the right arm\"\n\"Nod the head repeatedly\"\n\"Do a quick salute\"\n\n⌨️ Code & Controls\n\"Map keyboard arrows to head movements\"\n\"Add a button to toggle arm raising\"\n\"Set up a joystick to control both hands\""
+    }
+  ],
+  "agentHistory": [
+    {
+      "role": "user",
+      "content": "[ROBA_WELCOME_TRIGGER] Reply with EXACTLY this format, filling in the blanks — no extra text, no changes to the structure:\n\nHey! I'm Roba Copilot — your co-pilot for the [ROBOT NAME]. Here's what we can do together:\n\n🤖 Poses\n\"[short natural example]\"\n\"[short natural example]\"\n\"[short natural example]\"\n\n✋ Hands\n\"[short natural example]\"\n\"[short natural example]\"\n\"[short natural example]\"\n\n🎬 Animations\n\"[short natural example]\"\n\"[short natural example]\"\n\"[short natural example]\"\n\n⌨️ Code & Controls\n\"[short natural example]\"\n\"[short natural example]\"\n\"[short natural example]\"\n\nReplace [ROBOT NAME] with the actual robot name. Fill each example with a short, fun, natural human request (like \"Make it wave\" or \"Close the left fist\") — no code, no joint values."
+    },
+    {
+      "role": "assistant",
+      "content": "Hey! I'm Roba Copilot — your co-pilot for the PIB robot. Here's what we can do together:\n\n🤖 Poses\n\"Raise the left arm forward\"\n\"Turn the head to look right\"\n\"Sit the robot in a relaxed stance\"\n\n✋ Hands\n\"Close the left fist\"\n\"Open the right hand\"\n\"Pinch with the left thumb and index finger\"\n\n🎬 Animations\n\"Wave the right arm\"\n\"Nod the head repeatedly\"\n\"Do a quick salute\"\n\n⌨️ Code & Controls\n\"Map keyboard arrows to head movements\"\n\"Add a button to toggle arm raising\"\n\"Set up a joystick to control both hands\""
+    }
+  ],
+  "compressionCount": 0,
+  "workspaceRoot": "/home/robacrh/roba/roba-laravel/repos/faridhossainrd/my-mujoco-sim-1779731893",
+  "savedAt": 1779733344352
+}
