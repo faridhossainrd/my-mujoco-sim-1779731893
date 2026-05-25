@@ -1,0 +1,26 @@
+{
+  "sessionId": "sess_awhomr9m",
+  "fullHistory": [
+    {
+      "role": "user",
+      "content": "Give a brief, friendly welcome overview of what you can help with in this project. Use markdown with emoji section headers. Cover: Poses & Movement, Physics Simulation, Joint & Hand Control, and Code & Controls. Never use the word \"Animations\" — always say \"Physics Simulation\" instead. Keep it concise around 8–10 lines."
+    },
+    {
+      "role": "assistant",
+      "content": "## 👋 Welcome to Your Roba Studio Project!\n\n### 🤸‍♂️ Poses & Movement  \nCreate and test expressive robot postures—raise arms, tilt the head, or strike a T‑pose using the built‑in `data.ctrl` array.\n\n### 🧩 Physics Simulation  \nRoba Studio runs on the MuJoCo engine, giving you realistic dynamics, collision handling, and friction for every body and joint.\n\n### 🤖 Joint & Hand Control  \nFine‑tune each joint (shoulders, elbows, wrist, fingers) with precise control ranges, and combine actuators to lift arms against gravity.\n\n### 💻 Code & Controls  \nEdit `src/main.js` to set control signals, add keyboard shortcuts, or hook up UI sliders—everything runs live in the browser."
+    }
+  ],
+  "agentHistory": [
+    {
+      "role": "user",
+      "content": "Give a brief, friendly welcome overview of what you can help with in this project. Use markdown with emoji section headers. Cover: Poses & Movement, Physics Simulation, Joint & Hand Control, and Code & Controls. Never use the word \"Animations\" — always say \"Physics Simulation\" instead. Keep it concise around 8–10 lines."
+    },
+    {
+      "role": "assistant",
+      "content": "## 👋 Welcome to Your Roba Studio Project!\n\n### 🤸‍♂️ Poses & Movement  \nCreate and test expressive robot postures—raise arms, tilt the head, or strike a T‑pose using the built‑in `data.ctrl` array.\n\n### 🧩 Physics Simulation  \nRoba Studio runs on the MuJoCo engine, giving you realistic dynamics, collision handling, and friction for every body and joint.\n\n### 🤖 Joint & Hand Control  \nFine‑tune each joint (shoulders, elbows, wrist, fingers) with precise control ranges, and combine actuators to lift arms against gravity.\n\n### 💻 Code & Controls  \nEdit `src/main.js` to set control signals, add keyboard shortcuts, or hook up UI sliders—everything runs live in the browser."
+    }
+  ],
+  "compressionCount": 0,
+  "workspaceRoot": "/home/robacrh/roba/roba-laravel/repos/faridhossainrd/my-mujoco-sim-1779731893",
+  "savedAt": 1779732024945
+}

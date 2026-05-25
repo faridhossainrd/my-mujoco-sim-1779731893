@@ -1,0 +1,267 @@
+<mujoco model="pib">
+  <compiler angle="radian" meshdir="."/>
+
+  <visual>
+    <headlight ambient=".2 .2 .2" diffuse=".5 .5 .5" specular="0 0 0"/>
+    <rgba haze="0 0 0 1"/>
+    <global azimuth="120" elevation="-20"/>
+  </visual>
+
+  <asset>
+    <texture name="gradient" type="2d" builtin="gradient" rgb1="0.5 0.2 0.8" rgb2="0.8 0.3 1" width="512" height="512"/>
+    <material name="gradient_floor" texture="gradient" texuniform="false" reflectance="0.1"/>
+    <mesh name="urdf_body" file="urdf_body.stl"/>
+    <mesh name="urdf_head_base" file="urdf_head_base.stl"/>
+    <mesh name="urdf_head" file="urdf_head.stl"/>
+    <mesh name="urdf_camera_link" file="urdf_camera_link.stl"/>
+    <mesh name="urdf_shoulder_vertical" file="urdf_shoulder_vertical.stl"/>
+    <mesh name="urdf_shoulder_horizontal" file="urdf_shoulder_horizontal.stl"/>
+    <mesh name="urdf_elbow-upper" file="urdf_elbow-upper.stl"/>
+    <mesh name="urdf_elbow-lower" file="urdf_elbow-lower.stl"/>
+    <mesh name="urdf_forearm" file="urdf_forearm.stl"/>
+    <mesh name="urdf_palm_left" file="urdf_palm_left.stl"/>
+    <mesh name="urdf_thumb_rotator_left" file="urdf_thumb_rotator_left.stl"/>
+    <mesh name="urdf_finger_proximal" file="urdf_finger_proximal.stl"/>
+    <mesh name="urdf_finger_distal" file="urdf_finger_distal.stl"/>
+    <mesh name="urdf_palm_right" file="urdf_palm_right.stl"/>
+    <mesh name="urdf_thumb_rotator_right" file="urdf_thumb_rotator_right.stl"/>
+  </asset>
+
+  <worldbody>
+    <light pos="0 0 3" dir="0 0 -1" directional="false" diffuse="0.6 0.3 0.9"/>
+    <light pos="2 2 3" dir="-1 -1 -1.5" diffuse="0.7 0.3 1"/>
+    <light pos="-2 2 3" dir="1 -1 -1.5" diffuse="0.5 0.2 0.8"/>
+    <geom name="floor" size="0 0 .05" type="plane" material="gradient_floor" condim="3"/>
+
+    <geom pos="-0.013133 0.0125662 0.891187" quat="1 0 0 0" type="mesh" rgba="0.901961 0.901961 0.901961 1" mesh="urdf_body"/>
+    <body name="urdf_head_base" pos="-0.0131336 0.0125661 0.987187" quat="0 0.999999 -0.00145131 0">
+      <inertial pos="-3.47802e-05 0.0173777 -0.0128991" quat="0.498839 0.501151 -0.498871 0.501133" mass="0.275218" diaginertia="0.000399208 0.000269045 0.000161346"/>
+      <joint name="head_horizontal" pos="0 0 0" axis="0 0 1" range="-1.5708 1.5708" actuatorfrcrange="-1 1"/>
+      <geom pos="0 0 0.0966" quat="0 1 0 0" type="mesh" rgba="0.901961 0.901961 0.901961 1" mesh="urdf_head_base"/>
+      <body name="urdf_head" pos="-0.04125 0.048 -0.0129" quat="0.5 0.5 -0.5 -0.5">
+        <inertial pos="-0.0114433 -0.0680373 -0.0419057" quat="0.985567 0.00517039 0.000416988 0.169205" mass="0.523893" diaginertia="0.00479429 0.00341033 0.00284542"/>
+        <joint name="head_vertical" pos="0 0 0" axis="0 0 1" range="-0.785398 1.22173" actuatorfrcrange="-1 1"/>
+        <geom pos="0.048 0.1095 -0.04175" quat="0.5 0.5 0.5 -0.5" type="mesh" rgba="0.901961 0.901961 0.901961 1" mesh="urdf_head"/>
+        <geom pos="0.048 0.1095 -0.04175" quat="0.5 0.5 0.5 -0.5" type="mesh" rgba="0 0 0 1" mesh="urdf_camera_link"/>
+      </body>
+    </body>
+    <body name="urdf_shoulder_vertical" pos="0.146867 0.0125656 0.835688" quat="0.5 -0.5 0.5 -0.5">
+      <inertial pos="0 0 0.042643" quat="0.707107 0.707107 0 0" mass="0.25" diaginertia="0.000727241 0.000676808 0.000473401"/>
+      <joint name="shoulder_vertical_left" pos="0 0 0" axis="0 0 1" range="-1.5708 1.5708" actuatorfrcrange="-1 1"/>
+      <geom pos="0 0 -0.006" quat="0 0.707107 0 0.707107" type="mesh" rgba="0.901961 0.901961 0.901961 1" mesh="urdf_shoulder_vertical"/>
+      <body name="urdf_shoulder_horizontal" pos="0 -0.0374954 0.059" quat="0.5 0.5 -0.5 0.5">
+        <inertial pos="0.0314157 1.27926e-08 -0.0372" quat="0 0.707107 0 0.707107" mass="0.35" diaginertia="0.000845762 0.000797246 0.000370589"/>
+        <joint name="shoulder_horizontal_left" pos="0 0 0" axis="0 0 1" range="-1.5708 1.5708" actuatorfrcrange="-1 1"/>
+        <geom pos="0 -0.065 -0.0372" quat="0.5 -0.5 -0.5 0.5" type="mesh" rgba="0.901961 0.901961 0.901961 1" mesh="urdf_shoulder_horizontal"/>
+        <body name="urdf_elbow-upper" pos="0.14 0 -0.0372" quat="0.5 -0.5 -0.5 0.5">
+          <inertial pos="-4.45263e-07 -0.00561368 -0.0212902" quat="0.642145 0.296059 0.642139 0.296068" mass="0.217001" diaginertia="0.000351211 0.000290912 0.000207673"/>
+          <joint name="upper_arm_left" pos="0 0 0" axis="0 0 1" range="-1.5708 1.5708" actuatorfrcrange="-1 1"/>
+          <geom pos="-0.0650001 8.95795e-07 0.14" quat="1 0 0 0" type="mesh" rgba="0.901961 0.901961 0.901961 1" mesh="urdf_elbow-upper"/>
+          <body name="urdf_elbow-lower" pos="-0.0379 -0.021 -0.0763379" quat="0 0.707107 0 -0.707107">
+            <inertial pos="0.0430323 0.0153693 -0.0378003" quat="0.612451 3.18318e-05 1.63956e-05 0.790508" mass="0.149603" diaginertia="0.000250504 0.00022796 0.000168709"/>
+            <joint name="elbow_left" pos="0 0 0" axis="0 0 1" range="-0.785398 1.5708" actuatorfrcrange="-1 1"/>
+            <geom pos="-0.138124 -0.167824 0.0272001" quat="0.270598 0.653281 0.270598 -0.653281" type="mesh" rgba="0.901961 0.901961 0.901961 1" mesh="urdf_elbow-lower"/>
+            <body name="urdf_forearm" pos="0.0764382 0.0467398 -0.0378" quat="0.270598 0.653281 0.270598 -0.653281">
+              <inertial pos="0.00187611 -4.44423e-07 -0.0502671" quat="0.999468 -9.60624e-06 -0.032612 -1.77662e-05" mass="0.057" diaginertia="0.000181673 0.000171822 6.85147e-05"/>
+              <joint name="forearm_left" pos="0 0 0" axis="0 0 1" range="-1.5708 1.5708" actuatorfrcrange="-1 1"/>
+              <geom pos="-0.0647419 -0.000468706 0.303438" type="mesh" rgba="0.901961 0.901961 0.901961 1" mesh="urdf_forearm"/>
+              <body name="urdf_palm_left" pos="0.015 0.026 -0.1544" quat="0 0 -0.707107 -0.707107">
+                <inertial pos="0.00209874 -0.0415104 -0.0229751" quat="0.681846 0.731339 0.00976078 -0.0115846" mass="0.203065" diaginertia="0.000256294 0.000192295 8.69381e-05"/>
+                <joint name="wrist_left" pos="0 0 0" axis="0 0 1" range="-0.523599 0.523599" actuatorfrcrange="-1 1"/>
+                <geom pos="0.003 -0.1 -0.1827" quat="0.5 0.5 0.5 -0.5" type="mesh" rgba="0.901961 0.901961 0.901961 1" mesh="urdf_palm_left"/>
+                <body name="urdf_thumb_rotator_left" pos="0.00984052 -0.0377305 -0.0497714" quat="-0.444997 -0.549525 0.549525 -0.444997">
+                  <inertial pos="-0.00254195 0.000635827 -0.00573068" quat="0.772409 0.210572 0.186594 0.569409" mass="0.0195986" diaginertia="2.9496e-06 2.56041e-06 1.70057e-06"/>
+                  <joint name="thumb_left_opposition" pos="0 0 0" axis="0 0 1" range="0 1.5708" actuatorfrcrange="-1 1"/>
+                  <geom pos="0.0882365 -0.0783488 -0.488027" quat="0 0 0.994522 -0.104528" type="mesh" rgba="0.901961 0.901961 0.901961 1" mesh="urdf_thumb_rotator_left"/>
+                  <body name="urdf_finger_proximal" pos="-0.02 0.00132026 -0.010565" quat="0.612372 -0.353553 0.353553 0.612372">
+                    <inertial pos="-0.00233755 0.024 -3.42344e-09" quat="0.707107 0.707107 0 0" mass="0.0172374" diaginertia="3.27961e-06 3.24154e-06 8.30919e-07"/>
+                    <joint name="thumb_left_proximal" pos="0 0 0" axis="0 0 1" range="0 1.5708" actuatorfrcrange="-1 1"/>
+                    <geom pos="-0.0813959 -0.542444 -0.0614954" quat="0.642788 0.766044 0 0" type="mesh" rgba="0.901961 0.901961 0.901961 1" mesh="urdf_finger_proximal"/>
+                    <body name="urdf_finger_distal" pos="0 0.048 0" quat="1 0 0 0">
+                      <inertial pos="-0.00405723 0.0246259 -1.80773e-08" quat="0.704009 0.704012 0.066094 0.0661015" mass="0.0177279" diaginertia="3.29281e-06 3.19024e-06 9.1294e-07"/>
+                      <joint name="thumb_left_distal" pos="0 0 0" axis="0 0 1" range="0 1.5708" actuatorfrcrange="-1 1"/>
+                      <geom pos="-0.0812818 -0.590565 -0.0614954" quat="0.642788 0.766044 0 0" type="mesh" rgba="0.901961 0.901961 0.901961 1" mesh="urdf_finger_distal"/>
+                    </body>
+                  </body>
+                </body>
+                <body name="urdf_finger_proximal_2" pos="0.003 -0.0886175 -0.058502" quat="0 0 -0.0871557 0.996195">
+                  <inertial pos="-0.00233755 0.024 -3.42344e-09" quat="0.707107 0.707107 0 0" mass="0.0172374" diaginertia="3.27961e-06 3.24154e-06 8.30919e-07"/>
+                  <joint name="index_left_proximal" pos="0 0 0" axis="0 0 1" range="0 1.5708" actuatorfrcrange="-1 1"/>
+                  <geom pos="-0.0813959 -0.542444 -0.0614954" quat="0.642788 0.766044 0 0" type="mesh" rgba="0.901961 0.901961 0.901961 1" mesh="urdf_finger_proximal"/>
+                  <body name="urdf_finger_distal_2" pos="0 0.048 0" quat="1 0 0 0">
+                    <inertial pos="-0.00405723 0.0246259 -1.80773e-08" quat="0.704009 0.704012 0.066094 0.0661015" mass="0.0177279" diaginertia="3.29281e-06 3.19024e-06 9.1294e-07"/>
+                    <joint name="index_left_distal" pos="0 0 0" axis="0 0 1" range="0 1.5708" actuatorfrcrange="-1 1"/>
+                    <geom pos="-0.0812818 -0.590565 -0.0614954" quat="0.642788 0.766044 0 0" type="mesh" rgba="0.901961 0.901961 0.901961 1" mesh="urdf_finger_distal"/>
+                  </body>
+                </body>
+                <body name="urdf_finger_proximal_3" pos="0.003 -0.1 -0.0327" quat="0 0 0 -1">
+                  <inertial pos="-0.00233755 0.024 -3.42344e-09" quat="0.707107 0.707107 0 0" mass="0.0172374" diaginertia="3.27961e-06 3.24154e-06 8.30919e-07"/>
+                  <joint name="middle_left_proximal" pos="0 0 0" axis="0 0 1" range="0 1.5708" actuatorfrcrange="-1 1"/>
+                  <geom pos="-0.0813959 -0.542444 -0.0614954" quat="0.642788 0.766044 0 0" type="mesh" rgba="0.901961 0.901961 0.901961 1" mesh="urdf_finger_proximal"/>
+                  <body name="urdf_finger_distal_3" pos="0 0.048 0" quat="1 0 0 0">
+                    <inertial pos="-0.00405723 0.0246259 -1.80773e-08" quat="0.704009 0.704012 0.066094 0.0661015" mass="0.0177279" diaginertia="3.29281e-06 3.19024e-06 9.1294e-07"/>
+                    <joint name="middle_left_distal" pos="0 0 0" axis="0 0 1" range="0 1.5708" actuatorfrcrange="-1 1"/>
+                    <geom pos="-0.0812818 -0.590565 -0.0614954" quat="0.642788 0.766044 0 0" type="mesh" rgba="0.901961 0.901961 0.901961 1" mesh="urdf_finger_distal"/>
+                  </body>
+                </body>
+                <body name="urdf_finger_proximal_4" pos="0.003 -0.0886175 -0.00689802" quat="0 0 0.0871557 0.996195">
+                  <inertial pos="-0.00233755 0.024 -3.42344e-09" quat="0.707107 0.707107 0 0" mass="0.0172374" diaginertia="3.27961e-06 3.24154e-06 8.30919e-07"/>
+                  <joint name="ring_left_proximal" pos="0 0 0" axis="0 0 1" range="0 1.5708" actuatorfrcrange="-1 1"/>
+                  <geom pos="-0.0813959 -0.542444 -0.0614954" quat="0.642788 0.766044 0 0" type="mesh" rgba="0.901961 0.901961 0.901961 1" mesh="urdf_finger_proximal"/>
+                  <body name="urdf_finger_distal_4" pos="0 0.048 0" quat="1 0 0 0">
+                    <inertial pos="-0.00405723 0.0246259 -1.80773e-08" quat="0.704009 0.704012 0.066094 0.0661015" mass="0.0177279" diaginertia="3.29281e-06 3.19024e-06 9.1294e-07"/>
+                    <joint name="ring_left_distal" pos="0 0 0" axis="0 0 1" range="0 1.5708" actuatorfrcrange="-1 1"/>
+                    <geom pos="-0.0812818 -0.590565 -0.0614954" quat="0.642788 0.766044 0 0" type="mesh" rgba="0.901961 0.901961 0.901961 1" mesh="urdf_finger_distal"/>
+                  </body>
+                </body>
+                <body name="urdf_finger_proximal_5" pos="0.003 -0.0755461 0.0154205" quat="0 0 -0.156434 -0.987688">
+                  <inertial pos="-0.00233755 0.024 -3.42344e-09" quat="0.707107 0.707107 0 0" mass="0.0172374" diaginertia="3.27961e-06 3.24154e-06 8.30919e-07"/>
+                  <joint name="pinky_left_proximal" pos="0 0 0" axis="0 0 1" range="0 1.5708" actuatorfrcrange="-1 1"/>
+                  <geom pos="-0.0813959 -0.542444 -0.0614954" quat="0.642788 0.766044 0 0" type="mesh" rgba="0.901961 0.901961 0.901961 1" mesh="urdf_finger_proximal"/>
+                  <body name="urdf_finger_distal_5" pos="0 0.048 0" quat="1 0 0 0">
+                    <inertial pos="-0.00405723 0.0246259 -1.80773e-08" quat="0.704009 0.704012 0.066094 0.0661015" mass="0.0177279" diaginertia="3.29281e-06 3.19024e-06 9.1294e-07"/>
+                    <joint name="pinky_left_distal" pos="0 0 0" axis="0 0 1" range="0 1.5708" actuatorfrcrange="-1 1"/>
+                    <geom pos="-0.0812818 -0.590565 -0.0614954" quat="0.642788 0.766044 0 0" type="mesh" rgba="0.901961 0.901961 0.901961 1" mesh="urdf_finger_distal"/>
+                  </body>
+                </body>
+              </body>
+            </body>
+          </body>
+        </body>
+      </body>
+    </body>
+    <body name="urdf_shoulder_vertical_2" pos="-0.173133 0.0125658 0.835688" quat="0.5 -0.5 -0.5 0.5">
+      <inertial pos="0 0 0.042643" quat="0.707107 0.707107 0 0" mass="0.25" diaginertia="0.000727241 0.000676808 0.000473401"/>
+      <joint name="shoulder_vertical_right" pos="0 0 0" axis="0 0 1" range="-1.5708 1.5708" actuatorfrcrange="-1 1"/>
+      <geom pos="0 0 -0.006" quat="0 0.707107 0 0.707107" type="mesh" rgba="0.901961 0.901961 0.901961 1" mesh="urdf_shoulder_vertical"/>
+      <body name="urdf_shoulder_horizontal_2" pos="0 -0.0374954 0.059" quat="0.5 0.5 -0.5 0.5">
+        <inertial pos="0.0314157 -1.27926e-08 -0.0372" quat="0 0.707107 0 0.707107" mass="0.35" diaginertia="0.000845762 0.000797246 0.000370589"/>
+        <joint name="shoulder_horizontal_right" pos="0 0 0" axis="0 0 1" range="-1.5708 1.5708" actuatorfrcrange="-1 1"/>
+        <geom pos="0 0.065 -0.0372" quat="0.5 0.5 -0.5 -0.5" type="mesh" rgba="0.901961 0.901961 0.901961 1" mesh="urdf_shoulder_horizontal"/>
+        <body name="urdf_elbow-upper_2" pos="0.14 0 -0.0372" quat="0.5 -0.5 -0.5 0.5">
+          <inertial pos="-4.45263e-07 -0.00561368 -0.0212902" quat="0.642145 0.296059 0.642139 0.296068" mass="0.217001" diaginertia="0.000351211 0.000290912 0.000207673"/>
+          <joint name="upper_arm_right" pos="0 0 0" axis="0 0 1" range="-1.5708 1.5708" actuatorfrcrange="-1 1"/>
+          <geom pos="-0.0650001 8.95795e-07 0.14" quat="1 0 0 0" type="mesh" rgba="0.901961 0.901961 0.901961 1" mesh="urdf_elbow-upper"/>
+          <body name="urdf_elbow-lower_2" pos="-0.0379 -0.021 -0.0763379" quat="0 -0.707107 0 0.707107">
+            <inertial pos="0.0430323 0.0153693 -0.0378003" quat="0.612451 3.18318e-05 1.63956e-05 0.790508" mass="0.149603" diaginertia="0.000250504 0.00022796 0.000168709"/>
+            <joint name="elbow_right" pos="0 0 0" axis="0 0 1" range="-0.785398 1.5708" actuatorfrcrange="-1 1"/>
+            <geom pos="-0.138124 -0.167824 0.0272001" quat="0.270598 0.653281 0.270598 -0.653281" type="mesh" rgba="0.901961 0.901961 0.901961 1" mesh="urdf_elbow-lower"/>
+            <body name="urdf_forearm_2" pos="0.0764382 0.0467398 -0.0378" quat="0.653281 0.270598 -0.653281 0.270598">
+              <inertial pos="0.00187611 -4.44423e-07 -0.0502671" quat="0.999468 -9.60624e-06 -0.032612 -1.77662e-05" mass="0.057" diaginertia="0.000181673 0.000171822 6.85147e-05"/>
+              <joint name="forearm_right" pos="0 0 0" axis="0 0 1" range="-1.5708 1.5708" actuatorfrcrange="-1 1"/>
+              <geom pos="-0.0647419 -0.000468706 0.303438" type="mesh" rgba="0.901961 0.901961 0.901961 1" mesh="urdf_forearm"/>
+              <body name="urdf_palm_right" pos="0.015 0.025 -0.1544" quat="0 0 -0.707107 -0.707107">
+                <inertial pos="0.00209867 -0.0415108 -0.0274235" quat="0.731351 0.681832 -0.0115933 0.00976662" mass="0.203071" diaginertia="0.000256302 0.000192298 8.69433e-05"/>
+                <joint name="wrist_right" pos="0 0 0" axis="0 0 1" range="-0.523599 0.523599" actuatorfrcrange="-1 1"/>
+                <geom pos="-0.0783959 0.456264 -0.0255313" quat="0.707107 -0.707107 0 0" type="mesh" rgba="0.901961 0.901961 0.901961 1" mesh="urdf_palm_right"/>
+                <body name="urdf_thumb_rotator_right" pos="0.00984052 -0.0377305 -0.000628645" quat="0.549525 0.444997 -0.444997 0.549525">
+                  <inertial pos="0.00254195 0.000635824 -0.00573068" quat="0.569409 -0.186594 -0.210573 0.772409" mass="0.0195986" diaginertia="2.9496e-06 2.56041e-06 1.70057e-06"/>
+                  <joint name="thumb_right_opposition" pos="0 0 0" axis="0 0 1" range="0 1.5708" actuatorfrcrange="-1 1"/>
+                  <geom pos="0.201764 -0.0157674 -0.193605" quat="0.104528 0.994522 0 0" type="mesh" rgba="0.901961 0.901961 0.901961 1" mesh="urdf_thumb_rotator_right"/>
+                  <body name="urdf_finger_proximal_6" pos="0.02 0.00132026 -0.010565" quat="-0.353553 -0.612372 -0.612372 0.353553">
+                    <inertial pos="-0.00233755 0.024 -3.42344e-09" quat="0.707107 0.707107 0 0" mass="0.0172374" diaginertia="3.27961e-06 3.24154e-06 8.30919e-07"/>
+                    <joint name="thumb_right_proximal" pos="0 0 0" axis="0 0 1" range="0 1.5708" actuatorfrcrange="-1 1"/>
+                    <geom pos="-0.0813959 -0.542444 -0.0614954" quat="0.642788 0.766044 0 0" type="mesh" rgba="0.901961 0.901961 0.901961 1" mesh="urdf_finger_proximal"/>
+                    <body name="urdf_finger_distal_6" pos="0 0.048 0" quat="1 0 0 0">
+                      <inertial pos="-0.00405723 0.0246259 -1.80773e-08" quat="0.704009 0.704012 0.066094 0.0661015" mass="0.0177279" diaginertia="3.29281e-06 3.19024e-06 9.1294e-07"/>
+                      <joint name="thumb_right_distal" pos="0 0 0" axis="0 0 1" range="0 1.5708" actuatorfrcrange="-1 1"/>
+                      <geom pos="-0.0812818 -0.590565 -0.0614954" quat="0.642788 0.766044 0 0" type="mesh" rgba="0.901961 0.901961 0.901961 1" mesh="urdf_finger_distal"/>
+                    </body>
+                  </body>
+                </body>
+                <body name="urdf_finger_proximal_7" pos="0.003 -0.0886175 0.00810198" quat="0 0 0.0871557 0.996195">
+                  <inertial pos="-0.00233755 0.024 -3.42344e-09" quat="0.707107 0.707107 0 0" mass="0.0172374" diaginertia="3.27961e-06 3.24154e-06 8.30919e-07"/>
+                  <joint name="index_right_proximal" pos="0 0 0" axis="0 0 1" range="0 1.5708" actuatorfrcrange="-1 1"/>
+                  <geom pos="-0.0813959 -0.542444 -0.0614954" quat="0.642788 0.766044 0 0" type="mesh" rgba="0.901961 0.901961 0.901961 1" mesh="urdf_finger_proximal"/>
+                  <body name="urdf_finger_distal_7" pos="0 0.048 0" quat="1 0 0 0">
+                    <inertial pos="-0.00405723 0.0246259 -1.80773e-08" quat="0.704009 0.704012 0.066094 0.0661015" mass="0.0177279" diaginertia="3.29281e-06 3.19024e-06 9.1294e-07"/>
+                    <joint name="index_right_distal" pos="0 0 0" axis="0 0 1" range="0 1.5708" actuatorfrcrange="-1 1"/>
+                    <geom pos="-0.0812818 -0.590565 -0.0614954" quat="0.642788 0.766044 0 0" type="mesh" rgba="0.901961 0.901961 0.901961 1" mesh="urdf_finger_distal"/>
+                  </body>
+                </body>
+                <body name="urdf_finger_proximal_8" pos="0.003 -0.1 -0.0177" quat="0 0 0 1">
+                  <inertial pos="-0.00233755 0.024 -3.42344e-09" quat="0.707107 0.707107 0 0" mass="0.0172374" diaginertia="3.27961e-06 3.24154e-06 8.30919e-07"/>
+                  <joint name="middle_right_proximal" pos="0 0 0" axis="0 0 1" range="0 1.5708" actuatorfrcrange="-1 1"/>
+                  <geom pos="-0.0813959 -0.542444 -0.0614954" quat="0.642788 0.766044 0 0" type="mesh" rgba="0.901961 0.901961 0.901961 1" mesh="urdf_finger_proximal"/>
+                  <body name="urdf_finger_distal_8" pos="0 0.048 0" quat="1 0 0 0">
+                    <inertial pos="-0.00405723 0.0246259 -1.80773e-08" quat="0.704009 0.704012 0.066094 0.0661015" mass="0.0177279" diaginertia="3.29281e-06 3.19024e-06 9.1294e-07"/>
+                    <joint name="middle_right_distal" pos="0 0 0" axis="0 0 1" range="0 1.5708" actuatorfrcrange="-1 1"/>
+                    <geom pos="-0.0812818 -0.590565 -0.0614954" quat="0.642788 0.766044 0 0" type="mesh" rgba="0.901961 0.901961 0.901961 1" mesh="urdf_finger_distal"/>
+                  </body>
+                </body>
+                <body name="urdf_finger_proximal_9" pos="0.003 -0.0886175 -0.043502" quat="0 0 -0.0871557 0.996195">
+                  <inertial pos="-0.00233755 0.024 -3.42344e-09" quat="0.707107 0.707107 0 0" mass="0.0172374" diaginertia="3.27961e-06 3.24154e-06 8.30919e-07"/>
+                  <joint name="ring_right_proximal" pos="0 0 0" axis="0 0 1" range="0 1.5708" actuatorfrcrange="-1 1"/>
+                  <geom pos="-0.0813959 -0.542444 -0.0614954" quat="0.642788 0.766044 0 0" type="mesh" rgba="0.901961 0.901961 0.901961 1" mesh="urdf_finger_proximal"/>
+                  <body name="urdf_finger_distal_9" pos="0 0.048 0" quat="1 0 0 0">
+                    <inertial pos="-0.00405723 0.0246259 -1.80773e-08" quat="0.704009 0.704012 0.066094 0.0661015" mass="0.0177279" diaginertia="3.29281e-06 3.19024e-06 9.1294e-07"/>
+                    <joint name="ring_right_distal" pos="0 0 0" axis="0 0 1" range="0 1.5708" actuatorfrcrange="-1 1"/>
+                    <geom pos="-0.0812818 -0.590565 -0.0614954" quat="0.642788 0.766044 0 0" type="mesh" rgba="0.901961 0.901961 0.901961 1" mesh="urdf_finger_distal"/>
+                  </body>
+                </body>
+                <body name="urdf_finger_proximal_10" pos="0.003 -0.0755461 -0.0658206" quat="0 0 -0.156434 0.987688">
+                  <inertial pos="-0.00233755 0.024 -3.42344e-09" quat="0.707107 0.707107 0 0" mass="0.0172374" diaginertia="3.27961e-06 3.24154e-06 8.30919e-07"/>
+                  <joint name="pinky_right_proximal" pos="0 0 0" axis="0 0 1" range="0 1.5708" actuatorfrcrange="-1 1"/>
+                  <geom pos="-0.0813959 -0.542444 -0.0614954" quat="0.642788 0.766044 0 0" type="mesh" rgba="0.901961 0.901961 0.901961 1" mesh="urdf_finger_proximal"/>
+                  <body name="urdf_finger_distal_10" pos="0 0.048 0" quat="0.999034 0 0 0.0439503">
+                    <inertial pos="-0.00405723 0.0246259 -1.80773e-08" quat="0.704009 0.704012 0.066094 0.0661015" mass="0.0177279" diaginertia="3.29281e-06 3.19024e-06 9.1294e-07"/>
+                    <joint name="pinky_right_distal" pos="0 0 0" axis="0 0 1" range="0 1.5708" actuatorfrcrange="-1 1"/>
+                    <geom pos="-0.0812818 -0.590565 -0.0614954" quat="0.642788 0.766044 0 0" type="mesh" rgba="0.901961 0.901961 0.901961 1" mesh="urdf_finger_distal"/>
+                  </body>
+                </body>
+              </body>
+            </body>
+          </body>
+        </body>
+      </body>
+    </body>
+  </worldbody>
+
+  <actuator>
+    <!-- Head actuators -->
+    <motor name="head_horizontal" gear="20" joint="head_horizontal" ctrlrange="-1 1"/>
+    <motor name="head_vertical" gear="20" joint="head_vertical" ctrlrange="-1 1"/>
+
+    <!-- Left arm actuators -->
+    <motor name="shoulder_vertical_left" gear="40" joint="shoulder_vertical_left" ctrlrange="-1 1"/>
+    <motor name="shoulder_horizontal_left" gear="40" joint="shoulder_horizontal_left" ctrlrange="-1 1"/>
+    <motor name="upper_arm_left" gear="40" joint="upper_arm_left" ctrlrange="-1 1"/>
+    <motor name="elbow_left" gear="40" joint="elbow_left" ctrlrange="-1 1"/>
+    <motor name="forearm_left" gear="30" joint="forearm_left" ctrlrange="-1 1"/>
+    <motor name="wrist_left" gear="20" joint="wrist_left" ctrlrange="-1 1"/>
+
+    <!-- Left hand actuators -->
+    <motor name="thumb_left_opposition" gear="5" joint="thumb_left_opposition" ctrlrange="-1 1"/>
+    <motor name="thumb_left_proximal" gear="5" joint="thumb_left_proximal" ctrlrange="-1 1"/>
+    <motor name="thumb_left_distal" gear="5" joint="thumb_left_distal" ctrlrange="-1 1"/>
+    <motor name="index_left_proximal" gear="5" joint="index_left_proximal" ctrlrange="-1 1"/>
+    <motor name="index_left_distal" gear="5" joint="index_left_distal" ctrlrange="-1 1"/>
+    <motor name="middle_left_proximal" gear="5" joint="middle_left_proximal" ctrlrange="-1 1"/>
+    <motor name="middle_left_distal" gear="5" joint="middle_left_distal" ctrlrange="-1 1"/>
+    <motor name="ring_left_proximal" gear="5" joint="ring_left_proximal" ctrlrange="-1 1"/>
+    <motor name="ring_left_distal" gear="5" joint="ring_left_distal" ctrlrange="-1 1"/>
+    <motor name="pinky_left_proximal" gear="5" joint="pinky_left_proximal" ctrlrange="-1 1"/>
+    <motor name="pinky_left_distal" gear="5" joint="pinky_left_distal" ctrlrange="-1 1"/>
+
+    <!-- Right arm actuators -->
+    <motor name="shoulder_vertical_right" gear="40" joint="shoulder_vertical_right" ctrlrange="-1 1"/>
+    <motor name="shoulder_horizontal_right" gear="40" joint="shoulder_horizontal_right" ctrlrange="-1 1"/>
+    <motor name="upper_arm_right" gear="40" joint="upper_arm_right" ctrlrange="-1 1"/>
+    <motor name="elbow_right" gear="40" joint="elbow_right" ctrlrange="-1 1"/>
+    <motor name="forearm_right" gear="30" joint="forearm_right" ctrlrange="-1 1"/>
+    <motor name="wrist_right" gear="20" joint="wrist_right" ctrlrange="-1 1"/>
+
+    <!-- Right hand actuators -->
+    <motor name="thumb_right_opposition" gear="5" joint="thumb_right_opposition" ctrlrange="-1 1"/>
+    <motor name="thumb_right_proximal" gear="5" joint="thumb_right_proximal" ctrlrange="-1 1"/>
+    <motor name="thumb_right_distal" gear="5" joint="thumb_right_distal" ctrlrange="-1 1"/>
+    <motor name="index_right_proximal" gear="5" joint="index_right_proximal" ctrlrange="-1 1"/>
+    <motor name="index_right_distal" gear="5" joint="index_right_distal" ctrlrange="-1 1"/>
+    <motor name="middle_right_proximal" gear="5" joint="middle_right_proximal" ctrlrange="-1 1"/>
+    <motor name="middle_right_distal" gear="5" joint="middle_right_distal" ctrlrange="-1 1"/>
+    <motor name="ring_right_proximal" gear="5" joint="ring_right_proximal" ctrlrange="-1 1"/>
+    <motor name="ring_right_distal" gear="5" joint="ring_right_distal" ctrlrange="-1 1"/>
+    <motor name="pinky_right_proximal" gear="5" joint="pinky_right_proximal" ctrlrange="-1 1"/>
+    <motor name="pinky_right_distal" gear="5" joint="pinky_right_distal" ctrlrange="-1 1"/>
+  </actuator>
+</mujoco>
