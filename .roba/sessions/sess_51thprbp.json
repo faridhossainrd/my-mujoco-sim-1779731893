@@ -1,0 +1,26 @@
+{
+  "sessionId": "sess_51thprbp",
+  "fullHistory": [
+    {
+      "role": "user",
+      "content": "[ROBA_WELCOME_TRIGGER] First call getProjectTree to see the project files. Then based on the filenames and directory names you find, decide:\n\nA) If you can identify a specific robot (e.g. \"pib\", \"unitree\", \"g1\", \"spot\", \"atlas\" in file or folder names), reply with EXACTLY:\n\nHey! I'm Roba Copilot — your co-pilot for the [ROBOT NAME]. Here's what we can do together:\n\n🤖 Poses\n\"[short natural example]\"\n\"[short natural example]\"\n\"[short natural example]\"\n\n✋ Hands\n\"[short natural example]\"\n\"[short natural example]\"\n\"[short natural example]\"\n\n🎬 Animations\n\"[short natural example]\"\n\"[short natural example]\"\n\"[short natural example]\"\n\n⌨️ Code & Controls\n\"[short natural example]\"\n\"[short natural example]\"\n\"[short natural example]\"\n\nB) If it is an empty or custom project with no recognisable robot, reply with EXACTLY:\n\nHey! I'm Roba Copilot — ready to help you build something innovative. Here's what we can do:\n\n🤖 Custom Robot Design\n\"[creative idea]\"\n\"[creative idea]\"\n\"[creative idea]\"\n\n⚙️ Physics & Simulation\n\"[simulation idea]\"\n\"[simulation idea]\"\n\"[simulation idea]\"\n\n🛠️ Build & Experiment\n\"[experiment idea]\"\n\"[experiment idea]\"\n\"[experiment idea]\"\n\n⌨️ Code & Controls\n\"[code idea]\"\n\"[code idea]\"\n\"[code idea]\"\n\nFill every example with a short, fun, natural human request — no code, no joint values. No extra text outside the format."
+    },
+    {
+      "role": "assistant",
+      "content": "Hey! I'm Roba Copilot — your co-pilot for the pib. Here's what we can do together:\n\n🤖 Poses\n\"Show the robot waving its left hand.\"\n\"Make the robot look up at the ceiling.\"\n\"Pose the robot with arms raised in a T‑pose.\"\n\n✋ Hands\n\"Open and close the right hand fingers.\"\n\"Make the robot point with its left index finger.\"\n\"Grip a virtual object with both hands.\"\n\n🎬 Animations\n\"Play a walking‑in‑place animation.\"\n\"Animate the robot nodding its head repeatedly.\"\n\"Run a smooth arm‑swinging dance sequence.\"\n\n⌨️ Code & Controls\n\"Map keyboard keys to move the robot’s head.\"\n\"Add a UI slider to control the elbow joints.\"\n\"Implement a script that makes the robot follow a moving target.\""
+    }
+  ],
+  "agentHistory": [
+    {
+      "role": "user",
+      "content": "[ROBA_WELCOME_TRIGGER] First call getProjectTree to see the project files. Then based on the filenames and directory names you find, decide:\n\nA) If you can identify a specific robot (e.g. \"pib\", \"unitree\", \"g1\", \"spot\", \"atlas\" in file or folder names), reply with EXACTLY:\n\nHey! I'm Roba Copilot — your co-pilot for the [ROBOT NAME]. Here's what we can do together:\n\n🤖 Poses\n\"[short natural example]\"\n\"[short natural example]\"\n\"[short natural example]\"\n\n✋ Hands\n\"[short natural example]\"\n\"[short natural example]\"\n\"[short natural example]\"\n\n🎬 Animations\n\"[short natural example]\"\n\"[short natural example]\"\n\"[short natural example]\"\n\n⌨️ Code & Controls\n\"[short natural example]\"\n\"[short natural example]\"\n\"[short natural example]\"\n\nB) If it is an empty or custom project with no recognisable robot, reply with EXACTLY:\n\nHey! I'm Roba Copilot — ready to help you build something innovative. Here's what we can do:\n\n🤖 Custom Robot Design\n\"[creative idea]\"\n\"[creative idea]\"\n\"[creative idea]\"\n\n⚙️ Physics & Simulation\n\"[simulation idea]\"\n\"[simulation idea]\"\n\"[simulation idea]\"\n\n🛠️ Build & Experiment\n\"[experiment idea]\"\n\"[experiment idea]\"\n\"[experiment idea]\"\n\n⌨️ Code & Controls\n\"[code idea]\"\n\"[code idea]\"\n\"[code idea]\"\n\nFill every example with a short, fun, natural human request — no code, no joint values. No extra text outside the format."
+    },
+    {
+      "role": "assistant",
+      "content": "Hey! I'm Roba Copilot — your co-pilot for the pib. Here's what we can do together:\n\n🤖 Poses\n\"Show the robot waving its left hand.\"\n\"Make the robot look up at the ceiling.\"\n\"Pose the robot with arms raised in a T‑pose.\"\n\n✋ Hands\n\"Open and close the right hand fingers.\"\n\"Make the robot point with its left index finger.\"\n\"Grip a virtual object with both hands.\"\n\n🎬 Animations\n\"Play a walking‑in‑place animation.\"\n\"Animate the robot nodding its head repeatedly.\"\n\"Run a smooth arm‑swinging dance sequence.\"\n\n⌨️ Code & Controls\n\"Map keyboard keys to move the robot’s head.\"\n\"Add a UI slider to control the elbow joints.\"\n\"Implement a script that makes the robot follow a moving target.\""
+    }
+  ],
+  "compressionCount": 0,
+  "workspaceRoot": "/home/robacrh/roba/roba-laravel/repos/faridhossainrd/my-mujoco-sim-1779731893",
+  "savedAt": 1779735081699
+}
