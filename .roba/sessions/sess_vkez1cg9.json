@@ -1,0 +1,26 @@
+{
+  "sessionId": "sess_vkez1cg9",
+  "fullHistory": [
+    {
+      "role": "user",
+      "content": "Generate a welcome quick-reference card for this Roba Studio project. Use exactly 4 markdown sections with these emoji headers: 🤖 Poses, ✋ Hands, 🎬 Animations, ⌨️ Code & Controls. Under each section list 4–5 example prompts in double quotes — no prose, no descriptions, just the quoted commands. Make every example specific to this project's robot (use real pose names, actual joint directions, real capabilities you know about). No intro sentence, no closing sentence. Just the 4 sections."
+    },
+    {
+      "role": "assistant",
+      "content": "## 🤖 Poses\n- \"Set robot to T‑pose\"\n- \"Raise left arm forward\"\n- \"Raise right arm forward\"\n- \"Tilt head up\"\n- \"Tilt head down\"\n\n## ✋ Hands\n- \"Close left hand thumb\"\n- \"Open right hand index finger\"\n- \"Curl left hand pinky\"\n- \"Spread right hand fingers\"\n- \"Make left hand fist\"\n\n## 🎬 Animations\n- \"Wave left arm\"\n- \"Nod head continuously\"\n- \"Shake head side‑to‑side\"\n- \"Perform a quick arm raise‑then‑lower cycle\"\n- \"Open and close both hands repeatedly\"\n\n## ⌨️ Code & Controls\n- \"Set data.ctrl[2] = -1.0; data.ctrl[4] = -0.8; data.ctrl[3] = -0.3\"\n- \"Apply sinusoidal motion to data.ctrl[0] for head shake\"\n- \"Toggle pause with this.params['paused']\"\n- \"Change simulation timestep to 0.001 in <option>\"\n- \"Add a new motor actuator for joint='wrist_left'\""
+    }
+  ],
+  "agentHistory": [
+    {
+      "role": "user",
+      "content": "Generate a welcome quick-reference card for this Roba Studio project. Use exactly 4 markdown sections with these emoji headers: 🤖 Poses, ✋ Hands, 🎬 Animations, ⌨️ Code & Controls. Under each section list 4–5 example prompts in double quotes — no prose, no descriptions, just the quoted commands. Make every example specific to this project's robot (use real pose names, actual joint directions, real capabilities you know about). No intro sentence, no closing sentence. Just the 4 sections."
+    },
+    {
+      "role": "assistant",
+      "content": "## 🤖 Poses\n- \"Set robot to T‑pose\"\n- \"Raise left arm forward\"\n- \"Raise right arm forward\"\n- \"Tilt head up\"\n- \"Tilt head down\"\n\n## ✋ Hands\n- \"Close left hand thumb\"\n- \"Open right hand index finger\"\n- \"Curl left hand pinky\"\n- \"Spread right hand fingers\"\n- \"Make left hand fist\"\n\n## 🎬 Animations\n- \"Wave left arm\"\n- \"Nod head continuously\"\n- \"Shake head side‑to‑side\"\n- \"Perform a quick arm raise‑then‑lower cycle\"\n- \"Open and close both hands repeatedly\"\n\n## ⌨️ Code & Controls\n- \"Set data.ctrl[2] = -1.0; data.ctrl[4] = -0.8; data.ctrl[3] = -0.3\"\n- \"Apply sinusoidal motion to data.ctrl[0] for head shake\"\n- \"Toggle pause with this.params['paused']\"\n- \"Change simulation timestep to 0.001 in <option>\"\n- \"Add a new motor actuator for joint='wrist_left'\""
+    }
+  ],
+  "compressionCount": 0,
+  "workspaceRoot": "/home/robacrh/roba/roba-laravel/repos/faridhossainrd/my-mujoco-sim-1779731893",
+  "savedAt": 1779732759414
+}
